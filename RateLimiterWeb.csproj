@@ -10,19 +10,19 @@
 
   <ItemGroup>
     <Compile Remove="Models\**" />
+    <Compile Remove="UnitTests\**" />
     <Content Remove="Models\**" />
+    <Content Remove="UnitTests\**" />
     <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="UnitTests\**" />
     <None Remove="Models\**" />
+    <None Remove="UnitTests\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="UnitTests\" />
   </ItemGroup>
 
 </Project>
