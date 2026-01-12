@@ -25,16 +25,20 @@ Getting Started
 4. Run Visual studio in Admin Mode [Required to write log file on C: drive]
 5. Set Starting Project- RateLimiterWeb
 6. Run the project - Swagger page will open with two API endpoints
+7. 
    a. api/RateLimiter/ValidateRequest
        Accepts Username
        returns satuscode 200 and 429 depending upon Rate limits
+   
    Example :[User1, user2 and user3 already exist in DB]
              provide any one of them
              Also once added few more user you can use them to validate rate as per limits given
+   
    b. api/RateLimiter/UpdateRate
        Accepts RateParams objects with Username and limits
        returns statuscode 200 and 500 as per result.
        This can be used to Update  record if exists or will create new one for given UserName.
+   
    Example : {
                 "userName": "string",
                 "capacity": 0, //integer - maximum number of requests  
